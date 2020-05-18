@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gear {
+  height: 200px;
+}
+
+/* hide the gear when finsh loading  */
+
+.hide {
+  animation: vanish 0.5s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* gear rotation */
+
+.gear {
+  animation: gear-spin infinite 5s linear;
+}
+
+@keyframes gear-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
